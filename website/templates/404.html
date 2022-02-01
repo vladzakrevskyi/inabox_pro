@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <!-- error-area-start -->
+  <div class="error-area">
+    <div class="error-bg-1"><img src="/static/img/404/bg-1.png" alt="In A box background"></div>
+    <div class="error-bg-2"><img src="/static/img/404/bg-2.png" alt="In A box background"></div>
+    <div class="error-bg-3"><img src="/static/img/404/bg-3.png" alt="In A box background"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-12">
+          <div class="error-content">
+            <h2 class="title">{% trans 'It looks like the page does not exist or has been moved' %}</h2>
+            <p class="text">{% trans 'Check the entered website address or go to the home page' %}</p>
+            <a class="back" href="/"><span><i class="fas fa-chevron-left"></i></span> {% trans 'To the home page' %}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- error-area-end -->
+
+  <!-- h3-subscribe-area-start -->
+  {% include 'sections/free_lesson_form.html' %}
+  <!-- h3-subscribe-area-end -->
+
+{% endblock %}

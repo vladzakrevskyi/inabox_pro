@@ -1,0 +1,44 @@
+{% load i18n %}
+
+<div class="h2-what-we-area short">
+    <div class="h2-what-we-bshape"><img src="/static/img/home2/what-we-bg-shape.png" alt="In A box background"></div>
+    <div class="h2-what-we-bg1"><img src="/static/img/home2/what-we-bg-1.png" alt="In A box background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
+                <div class="text-center section-title">
+                    <br>
+                    <h2 class="title text-uppercase">{% trans 'How it works' %}</h2>
+                    <h6 class="intro">{% trans '4 simple steps to achieve your goal' %}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters">
+            <ul class="progressbar">
+                {% for i in steps %}
+                <li class="active {% if i.id == 1 %}hovered{% endif %} pl-3 pr-3" id="li-{{ i.id }}">
+                    <strong>{{ i.title|safe }}</strong>
+                    <div class="service-box-4 alignment custom-radius-3 steps-border">
+                        <div class="icon">
+                            <span class="color-2 {{ i.icon }}"></span>
+                        </div>
+                        <a href>
+                            <div class="content">
+                                <p class="text">{{ i.text|safe }}</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("#accordion").accordion({
+            animate: 500
+        });
+    });
+</script>

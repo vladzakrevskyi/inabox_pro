@@ -1,0 +1,89 @@
+{% load static %}
+{% load i18n %}
+
+<header class="header-2">
+    <div class="h2-header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-sm-12 col-12">
+                    <div class="h2hta-left">
+                        <p class="info">
+                            <span><i class="fas fa-phone"></i></span>
+                            <span class="hide">{% trans 'Call' %} : </span><a href="tel: +447388990967">+44 7388 990967</a>
+                            |
+                            <span><i class="far fa-clock"></i></span>
+                            <span class="hide">{% trans 'Mo - Fr' %} : </span>09:00- 19:00 GMT 2
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-5 col-sm-4 col-4 hide">
+                    <div class="h2hta-right">
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/inabox.pro/" target="_blank">
+                                <i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://m.me/inabox.pro/" target="_blank">
+                                <i class="fab fa-facebook-messenger"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h2-header-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="h2-logo">
+                        <a href="{% url 'home_page' %}">
+                            <img src="/static/img/home2/logo.png" alt="In A box">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-9 col-sm-8 col-6">
+                    <div class="responsive-menu d-lg-none">
+                        <div class="show">
+                            <div class="btn-group">
+                                <button id="open_btn" type="button" class="btn btn-info open_contacts">
+                                    <span class="fa fa-phone"></span>
+                                </button>
+                                <div id="contacts" align="center">
+                                    <div class="section-field">
+                                        <span id="contacts_close">X</span>
+                                        <div class="contact_chanel">
+                                            <span><i class="fas fa-phone"></i><a href="tel: +447388990967">+44 7388 990967</a></span><br>
+                                            <span><i class="far fa-clock"></i> 09:00- 19:00 GMT 2</span><br>
+                                            <a href="#">{% trans 'Contact us' %}</a>
+                                            <div class="dropdown-divider"></div>
+                                            <ul class="social">
+                                                <li><a href="#" target="_blank">
+                                                    <i class="fab fa-facebook-f fa-3x"></i></a></li>
+                                                <li><a href="#" target="_blank">
+                                                    <i class="fab fa-facebook-messenger fa-3x"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu d-none d-lg-block">
+                        <nav>
+                            <ul id="menu">
+                                <li><a href="{% url 'home_page' %}">{% trans 'Home' %}</a></li>
+                                <li><a class="scrollto" href="{% url 'home_page' %}#about_us">{% trans 'About us' %}</a></li>
+                                <li><a href="#" class="open_modal_form_careers">{% trans 'Careers' %}</a></li>
+                                <li><a href="{% url 'business_page' %}">{% trans 'Business Premium' %}</a></li>
+                                <li><a class="open-zammad-chat">{% trans 'Assistance' %}</a></li>
+                                <li>
+                                    <button name="submit" type="submit" value="Send"
+                                            class="link picker-link-3 hvr-bs open_modal_form">{% trans 'Request' %}
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

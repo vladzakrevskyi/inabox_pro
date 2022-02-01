@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+
+{% block title %} {% trans 'In a box - Diagnostic Bulgaria' %} {% endblock %}
+{% block content %}
+<div class="breadcumb-area">
+    <div class="content">
+        <h1 class="title">
+            {% for el in diagnostic %}
+                {{ el.title }}
+            {% endfor %}
+        </h1>
+    </div>
+</div>
+<div class="container">
+    <div class="h2-diagnostic-block text-center">
+        {% for el in diagnostic %}
+            {{ el.desc|safe }}
+        {% endfor %}
+    </div>
+    <div class="h2-diagnostic-block text-center">
+        {% for el in diagnostic %}
+        {{ el.html_pay_pal|safe }}
+        {% endfor %}
+    </div>
+    <div class="h2-diagnostic-block text-center">
+        {% for el in diagnostic %}
+        {{ el.html_field|safe }}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

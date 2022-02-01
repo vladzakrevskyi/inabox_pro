@@ -1,0 +1,29 @@
+{% load i18n %}
+
+<div class="h2-what-we-area short">
+    <div class="h2-what-we-bshape custom"><img src="/static/img/home2/what-we-bg-shape.png" alt="In A box background"></div>
+    <div class="h2-what-we-bg1 custom"><img src="/static/img/home2/what-we-bg-1.png" alt="In A box background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
+                <div class="text-center section-title">
+                    <h2 class="title">{% trans 'OUR GUARANTEES' %}</h2>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="h2-testimonial-carousel owl-carousel">
+            {% for i in offers %}
+            <div class="service-box-4 alignment custom-shadow custom-radius-3">
+                <div class="icon">
+                    <span class="{{ i.color }} {{ i.icon }}"></span>
+                </div>
+                <div class="content">
+                    <h2 class="title">{{ i.title }}</h2>
+                    <p class="text">{{ i.text|safe }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

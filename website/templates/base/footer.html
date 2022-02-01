@@ -1,0 +1,74 @@
+{% load i18n %}
+
+<footer class="h2-footer">
+    <div class="h2-footer-top-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+                    <div class="h1ftaw-info h1fta-widget description">
+                        <div class="f1logo">
+                           <h1 class="text-white">{% trans 'In a box' %}</h1>
+                        </div>
+                        <p class="text">{% trans 'In a box – GET YOUR COMFORT AGAIN BY BRINGING LIFE BACK TO YOUR DEVICES' %}</p>
+                    </div>
+                </div>
+                <div class="row col-lg-4 col-md-6 col-sm-6 col-12 hide">
+                    <div class="col-lg-6 col-md-3 col-sm-3 col-12">
+                        <div class="h1ftaw-link h1fta-widget">
+                            <h4 class="title">{% trans 'Useful links' %}</h4>
+                            <ul class="links">
+                                <li><a href="{% url 'home_page' %}">{% trans 'Home' %}</a></li>
+                                <li><a class="scrollto" href="{% url 'home_page' %}#about_us">{% trans 'About us' %}</a></li>
+                                <li><a href="#" class="open_modal_form">{% trans 'Request a diagnostic' %}</a></li>
+                                <li><a href="{% url 'business_page' %}">{% trans 'Business premium' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-3 col-sm-3 col-12">
+                        <div class="h1ftaw-link h1fta-widget">
+                            <h4 class="title hidden">{% trans 'Useful links' %}</h4>
+                            <ul class="links">
+                                <li><a class="open-zammad-chat">{% trans 'Assistance' %}</a></li>
+                                <li><a href="{% url 'terms_page' %}">{% trans 'Terms and conditions' %}</a></li>
+                                <li><a class="scrollto" href="{% url 'home_page' %}#contact_us">{% trans 'Contact Us' %}</a></li>
+                                <li><a class="open_modal_form_careers" href="#">{% trans 'Careers' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                    <div class="h1ftaw-contact h1fta-widget">
+                        <h4 class="title">{% trans 'Contact' %}</h4>
+                        <ul class="contact">
+                            <li>
+                                <a href="mailto: info@inabox.pro">info@inabox.pro</a>
+                                <a href="tel:+44 7388 990967">+44 7388 990967</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h2-footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-7 col-12">
+                    <div class="h1fba-left">
+                        <p class="copyright">
+                            © In a box 2021, All Rights Reserved.
+                            Created by <a href="https://gnuhost.eu/" target="_blank">Gnuhost</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-5 col-12">
+                    <div class="h1fba-right">
+                        <ul class="links">
+                            <li><a href="{% url 'terms_page' %}">{% trans 'Terms and conditions' %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

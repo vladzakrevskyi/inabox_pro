@@ -1,0 +1,87 @@
+{% load i18n %}
+
+<div class="h3-subscribe-area" id="free_lesson_form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-12">
+                <div class="h3-subscribe pt-3">
+                    <h2 class="title">{% trans 'Get your device diagnostic now' %}</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <div class="custom-box">
+                            <span class="color-11 flaticon-message"></span>
+                            <h2 class="color-11">{% trans 'Form' %}</h2>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="custom-box">
+                            <span class="color-11 flaticon-pin"></span>
+                            <h2 class="color-11">{% trans 'Pick up' %}</h2>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="custom-box">
+                            <span class="color-11 flaticon-team"></span>
+                            <h2 class="color-11">{% trans 'Repair' %}</h2>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="custom-box">
+                            <span class="color-11 flaticon-target"></span>
+                            <h2 class="color-11">{% trans 'Shipping' %}</h2>
+                        </div>
+                    </div>
+                </div>
+                <form action="#" method="post" id="free-lesson">
+                    {% csrf_token %}
+                    <div class="h3s-input-box">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 padding-bottom">
+                                <input type="text" name="name" placeholder="{% trans 'Name' %}*" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 padding-bottom">
+                                <input type="email" name="email" placeholder="{% trans 'E-Mail' %}*" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 padding-bottom">
+                                <input type="tel" name="phone" placeholder="{% trans 'Phone' %}*" minlength="9" maxlength="15"
+                                       required
+                                       pattern="[\+]?(\d{1,3})?\s?\d{3}[\-]?\d{3}[\-]?\d{3}">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 padding-bottom">
+                                <input type="text" name="country" placeholder="{% trans 'Country' %}*" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 padding-bottom">
+                                <input class="w-100" type="text" onfocus="(this.type='date')" placeholder="{% trans 'Date for pickup' %}*" name="date_for_pickup" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 padding-bottom">
+                                <select name="device_type" required>
+                                    <option value="Not selected">{% trans 'Select your device type' %}*</option>
+                                    <option value="mobile">{% trans 'Mobile' %}</option>
+                                    <option value="tablet">{% trans 'Tablet' %}</option>
+                                    <option value="desktop">{% trans 'Desktop<' %}/option>
+                                    <option value="laptop">{% trans 'Laptop' %}</option>
+                                    <option value="Data Recovery">{% trans 'Data Recovery' %}</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 col-12 padding-bottom">
+                                <label class="custom-label terms-label">
+                                    <input type="checkbox" required>
+                                    <span class="text-white line-height-1">{% trans 'Accept' %} <a href="{% url 'terms_page' %}" target="_blank">{% trans 'terms and conditions' %}</a> {% trans 'of the service' %}</span>
+                                </label>
+                            </div>
+                            <input class="sr-only js-ip-address" type="text" name="ip_address" readonly>
+                            <div class="col-md-12 col-12 padding-bottom">
+                                <p class="color-11">* {% trans 'All fields are required' %}</p>
+                            </div>
+                            <br>
+                            <div class="col-lg-12 col-md-12 col-12 mt-4 submit text-center">
+                                <input class="custom-radius p-0 w-200" type="submit" value="{% trans 'Request' %}">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

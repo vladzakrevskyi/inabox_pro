@@ -1,0 +1,42 @@
+{% load i18n %}
+
+<div class="h2-testimonial-area short">
+    <div class="h2-what-we-bshape"><img src="/static/img/home2/what-we-bg-shape.png" alt="In A box background"></div>
+    <div class="h2-what-we-bg1"><img src="/static/img/home2/what-we-bg-1.png" alt="In A box background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12 col-12 text-center">
+                <div class="section-title">
+                    <h2 class="title">{% trans 'CUSTOMER TESTIMONIALS' %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="h2-testimonial-carousel owl-carousel">
+            {% for i in testimonials %}
+            <div class="h2-single-testimonial color-1">
+                <p class="text height-150">{{ i.text }}</p>
+                <div class="author">
+                    <div class="img">
+                        <img src="{{ i.image.url }}" alt="{{ i.name }}">
+                    </div>
+                    <div class="info">
+                        <h4 class="name">{{ i.name }}</h4>
+                        <p class="desg">{{ i.description }}</p>
+                        <div class="h1ftaw-subscribe h1fta-widget">
+                            <ul class="f-social">
+                                {% if i.fb_url %}
+                                <li><a href="{{ i.fb_url }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                {% endif %}
+                                {% if i.ldn_url %}
+                                <li><a href="{{ i.ldn_url }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
